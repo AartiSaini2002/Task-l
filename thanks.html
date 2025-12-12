@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+  Author: Aarti Saini
+  Date: 2025-11-23
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmation – Gahunia Wedding Collection</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="container header-container">
+    <div class="logo-block">
+      <h1 class="logo">Gahunia Wedding Collection</h1>
+      <p class="tagline">Complete Your Look, Effortlessly.</p>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="order.html">Order</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section id="confirmation">
+    <h2>Thank You for Your Order!</h2>
+    <p>Your rental request has been submitted successfully. We’ll contact you soon to confirm availability.</p>
+  </section>
+
+  <section class="confirmation-card">
+    <h3>Your Order Details</h3>
+    <p><strong>Name:</strong> <span id="nameConfirm"></span></p>
+    <p><strong>Email:</strong> <span id="emailConfirm"></span></p>
+    <p><strong>Phone:</strong> <span id="phoneConfirm"></span></p>
+    <p><strong>Selected Gowns:</strong> <span id="gownsConfirm"></span></p>
+    <p><strong>Selected Lehengas:</strong> <span id="lehengasConfirm"></span></p>
+    <p><strong>Selected Jewellery:</strong> <span id="jewelleryConfirm"></span></p>
+    <p><strong>Rental Dates:</strong> <span id="datesConfirm"></span></p>
+    <p><strong>Quantity:</strong> <span id="quantityConfirm"></span></p>
+    <p><strong>Special Requests:</strong> <span id="messageConfirm"></span></p>
+    <p class="total"><strong>Total Price:</strong> <span id="totalPriceConfirm"></span></p>
+  </section>
+
+  <div class="note">
+    <p>We’ll reach out to confirm your booking and provide payment details. If you have questions, contact us at <a href="mailto:gahuniaoutfit@gmail.com">gahuniaoutfit@gmail.com</a>.</p>
+  </div>
+</main>
+
+<footer id="contact">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:gahuniaoutfit@gmail.com">gahuniaoutfit@gmail.com</a></p>
+      <p>Phone: <a href="tel:+91983452471">+919834524471</a></p>
+      <p>Address 1: Gulmohar Colony, Ludhiana, Punjab, India</p>
+      <p>Address 2: Market 22, Chandigarh, India</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="order.html">Order</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <ul class="social">
+        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+        <li><a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="legal">Gahunia Wedding Collection © 2025</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const params = new URLSearchParams(window.location.search);
+
+  const setText = (id, value) => {
+    document.getElementById(id).textContent = value || "None";
+  };
+
+  setText("nameConfirm", params.get("fullname"));
+  setText("emailConfirm", params.get("email"));
+  setText("phoneConfirm", params.get("phone"));
+  setText("gownsConfirm", params.getAll("gowns[]").join(", "));
+  setText("lehengasConfirm", params.getAll("lehengas[]").join(", "));
+  setText("jewelleryConfirm", params.getAll("jewellery[]").join(", "));
+  setText("datesConfirm", params.get("start") + " to " + params.get("end"));
+  setText("quantityConfirm", params.get("quantity"));
+  setText("messageConfirm", params.get("message"));
+  setText("totalPriceConfirm", "€" + params.get("totalHidden"));
+});
+</script>
+
+</body>
+</html>

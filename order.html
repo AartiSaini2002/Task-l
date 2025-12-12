@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+  Author: Aarti Saini
+  Date: 2025-11-23
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Place your rental order for bridal lehengas, gowns, and jewellery.">
+  <title>Order – Gahunia Wedding Collection</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.20/css/intlTelInput.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="container header-container">
+    <div class="logo-block">
+      <h1 class="logo">Gahunia Wedding Collection</h1>
+      <p class="tagline">Complete Your Look, Effortlessly.</p>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="order.html" class="active">Order</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <!-- Intro -->
+  <section>
+     <h2 style="text-align:center;">Place Your Rental Order</h2>
+    <p style="text-align:center;"> Discover a curated selection of bridal lehengas, gowns, and jewellery available for easy rental. Simply explore the catalog, choose the items you love, and fill out the order form. We’ll handle the rest and reach out to finalize your booking.
+    </p>
+  </section>
+
+  <!-- Order Form -->
+  <section>
+    <h2 style="text-align:center;">Rental Order Form</h2>
+
+    <form id="rentalForm" class="order-form">
+
+      <!-- Customer Info -->
+      <fieldset>
+        <legend>Customer Information</legend>
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required>
+        
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+        
+         <label for="phone">Phone Number</label>
+  <div class="phone-wrapper">
+    <select id="country-code" name="country-code" required aria-label="Select country code">
+       <option value="+1">USA +1</option>
+      <option value="+44">UK +44</option>
+      <option value="+91" selected>India +91</option>
+      <option value="+61">Australia +61</option>
+      <option value="+81">Japan +81</option>
+      <option value="+358">Finland +358</option>
+        <option value="+49">Germany +49</option>
+        <option value="+33">France +33</option>
+        <option value="+39">Italy +39</option>
+        <option value="+1">USA +1</option> 
+          <option value="+64">New Zealand +64</option>
+
+    </select>
+        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required aria-label="Enter phone number">
+  </div>
+      </fieldset>
+
+      <!-- Rental Details -->
+      <fieldset>
+        <legend>Rental Details</legend>
+        
+        <label for="gown">Select a Gown:</label> <select id="gown" name="gown" > <option value="">-- Choose a gown --</option> <optgroup label="Gowns">
+            <option value="gown1" data-price="89">Gown 1 – Elegant pastel gown (€89/d)</option>
+            <option value="gown2" data-price="99">Gown 2 – Classic evening gown (€99/d)</option>
+            <option value="gown3" data-price="109">Gown 3 – Sequin party gown (€109/d)</option>
+            <option value="gown4" data-price="129">Gown 4 – Luxury embroidered gown (€129/d)</option>
+            <option value="gown5" data-price="119">Gown 5 – Red ball gown (€119/d)</option>
+            <option value="gown6" data-price="99">Gown 6 – Off-shoulder evening gown (€99/d)</option>
+          </optgroup>
+        </select>
+
+                <label for="lehenga">Select a Lehenga:</label> <select id="lehenga" name="lehenga" > <option value="">-- Choose a lehenga --</option> <optgroup label="Lehengas">
+
+            <option value="lehenga1" data-price="199">Lehenga 1 – Red bridal lehenga (€199/d)</option>
+            <option value="lehenga2" data-price="179">Lehenga 2 – Pink wedding lehenga (€179/d)</option>
+            <option value="lehenga3" data-price="159">Lehenga 3 – Blue party lehenga (€159/d)</option>
+            <option value="lehenga4" data-price="209">Lehenga 4 – Gold bridal lehenga (€209/d)</option>
+            <option value="lehenga5" data-price="189">Lehenga 5 – Green festive lehenga (€189/d)</option>
+            <option value="lehenga6" data-price="169">Lehenga 6 – Pastel pink lehenga (€169/d)</option>
+          </optgroup>
+        </select>
+
+                <label for="jewellery">Select a Jewellery:</label> <select id="jewellery" name="jewellery" > <option value="">-- Choose a jewellery --</option> <optgroup label="Jewellery">
+
+            <option value="jewellery1" data-price="39">Jewellery 1 – Gold necklace set (€39/d)</option>
+            <option value="jewellery2" data-price="29">Jewellery 2 – Silver bracelet set (€29/d)</option>
+            <option value="jewellery3" data-price="35">Jewellery 3 – Traditional maang-tikka set (€35/d)</option>
+            <option value="jewellery4" data-price="32">Jewellery 4 – Chandelier earrings set (€32/d)</option>
+            <option value="jewellery5" data-price="36">Jewellery 5 – Pearl jewellery set (€36/d)</option>
+            <option value="jewellery6" data-price="40">Jewellery 6 – Gold bangles set (€40/d)</option>
+          </optgroup>
+        </select>
+
+        <label for="start">Start Date</label>
+        <input type="date" id="start" name="start" required>
+
+        <label for="end">End Date</label>
+        <input type="date" id="end" name="end" required>
+
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+
+        <p><strong>Total Price:</strong> <span id="totalPrice">€0</span></p>
+        <input type="hidden" id="totalHidden" name="totalHidden">
+      </fieldset>
+
+      <!-- Additional Info -->
+      <fieldset>
+        <legend>Additional Information</legend>
+        <label for="message">Special Requests</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+        
+        <label><input type="checkbox" name="terms" required> I accept the rental terms and privacy policy</label>
+        <label><input type="checkbox" name="newsletter"> Subscribe to newsletter</label>
+      </fieldset>
+
+      <!-- Submit -->
+      <button type="submit" class="btn-cta">Submit Rental Request</button>
+    </form>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:gahuniaoutfit@gmail.com">gahuniaoutfit@gmail.com</a></p>
+      <p>Phone: <a href="tel:+91983452471">+91 98 345 2471</a></p>
+      <p>Address 1: Gulmohar Colony, Ludhiana, Punjab, India</p>
+      <p>Address 2: Market 22, Chandigarh, India</p>
+    </div>
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="order.html">Order</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <ul class="social">
+        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+        <li><a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="legal">Gahunia Wedding Collection © 2025</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById('rentalForm');
+
+  function calculateTotal() {
+    const getPrices = name => {
+      const select = form[name];
+      if (!select) return [];
+      return [...select.selectedOptions].map(opt => parseFloat(opt.getAttribute("data-price")) || 0);
+    };
+
+    const gowns = getPrices("gown");
+    const lehengas = getPrices("lehenga");
+    const jewellery = getPrices("jewellery");
+
+    const start = new Date(form.start.value);
+    const end = new Date(form.end.value);
+    let days = 0;
+    if (start && end && end > start) {
+      days = Math.ceil((end - start) / (1000 * 60 * 60 * 24));
+    } else {
+      days = 1; // fallback to 1 day
+    }
+
+    const quantity = parseInt(form.quantity.value) || 1;
+    const dailyTotal = [...gowns, ...lehengas, ...jewellery].reduce((sum, p) => sum + p, 0);
+    const totalPrice = dailyTotal * days * quantity;
+
+    document.getElementById("totalPrice").textContent = totalPrice ? "€" + totalPrice : "€0";
+    document.getElementById("totalHidden").value = totalPrice;
+  }
+
+  // Attach listeners so total updates live
+  ["gown","lehenga","jewellery","start","end","quantity"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener("change", calculateTotal);
+  });
+  
+
+  // Run once on page load
+  calculateTotal();
+
+  // Redirect to thanks.html with query parameters
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const params = new URLSearchParams(new FormData(form)).toString();
+    window.location.href = "thanks.html?" + params;
+  });
+});
+
+</script>
+
+
+
+</body>
+</html>
