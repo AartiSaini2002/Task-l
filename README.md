@@ -1,7 +1,7 @@
 # Gahunia Wedding Collection – Rental Catalog
 
 **Author:** Aarti Saini  
-**Date:** November 23, 2025  
+**Date:** December 10, 2025  
 
 ---
 
