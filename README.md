@@ -5,62 +5,86 @@
 
 ---
 
-## Project Overview
+## Course: Basics of Web Development
 
-This project is a **web-based bridal rental catalog** where users can browse gowns, lehengas, and jewellery, view images and videos, and place rental orders.  
-
-**Course Objectives Covered:**  
-- **HTML:** Semantic structure with headings, paragraphs, lists, links, and forms  
-- **Content:** Images and videos added; proper usage of local files  
-- **CSS:** External stylesheet, responsive design, dark mode  
-- **JavaScript:** Dynamic total price calculation, form validation, redirect to confirmation page  
-- **Forms:** Collect user info, rental dates, quantity, and special requests  
+**Objectives:**  
+- Create sustainable web pages using HTML.  
+- Add images, videos, animations, and audio.  
+- Use CSS for styling and layouts.  
+- Implement basic JavaScript and forms.  
+- Understand publishing via GitHub Pages.
 
 ---
 
-## Folder Structure
+## Project Overview
 
-Task-L/
-├─ index.html # Landing Page
-├─ catalog.html # Catalog Page
-├─ order.html # Rental Form
-├─ thanks.html # Order Confirmation
-├─ style.css # Stylesheet
-├─ images/ # Product images
-├─ videos/ # Product videos
-└─ README.md # Project documentation
+Gahunia Wedding Collection is a **web-based rental catalog** for bridal wear, gowns, and jewellery. Users can:
+
+- Browse products with images and videos.  
+- Place rental orders through a responsive form with live price calculation.  
+- View order confirmation on a separate page.
+
+**Pages:**  
+- `index.html` – Landing page  
+- `catalog.html` – Product catalog  
+- `order.html` – Rental order form  
+- `thanks.html` – Order confirmation  
 
 ---
 
 ## Features
 
-- Interactive product catalog with images and video previews  
-- Detailed rental form with live price calculation  
-- Responsive layout for desktop, tablet, and mobile  
+- Interactive catalog and videos  
+- Responsive design (desktop, tablet, mobile)  
 - Dark mode support  
-- Accessibility with proper labels and focus outlines  
+- Accessible forms with proper labels  
+- Live total price calculation on order page  
+
+---
+
+## Folder Structure
+
+
+Task-L/
+├─ index.html       # Landing page
+├─ catalog.html     # Product catalog page
+├─ order.html       # Rental order form page
+├─ thanks.html      # Order confirmation page
+├─ style.css        # Main stylesheet
+├─ images/          # Folder containing all images
+├─ videos/          # Folder containing all preview videos
+└─ README.md        # This README file
+
+
 
 ---
 
 ## How to Use
 
-1. Open `index.html` in a browser  
-2. Navigate to **Catalog** to browse products  
-3. Click **Rent Now** to go to **Order Page**  
-4. Fill out the rental form and submit  
-5. View confirmation on `thanks.html`  
+1. Open `index.html`.  
+2. Explore products in **Catalog**.  
+3. Click **Rent Now** to go to the order form.  
+4. Fill in details and submit.  
+5. See order details on `thanks.html`.  
 
 ---
 
-## Technologies Used
+## GitHub Pages
 
-- **HTML5, CSS3, JavaScript**  
-- **Font Awesome** icons  
-- **Google Fonts:** Inter & Playfair Display  
+Live website: [https://aartisaini2002.github.io/Task-l/](https://aartisaini2002.github.io/Task-l/)  
+Landing page: [https://aartisaini2002.github.io/Task-l/index.html](https://aartisaini2002.github.io/Task-l/index.html)
 
 ---
 
-## Author Contact
+## Notes / Change Log
+
+- Fixed HTML validation issues (required `<select>` placeholder, removed trailing slashes).  
+- Updated video elements for HTML5 compliance.  
+- Tested responsiveness and dark mode.  
+
+---
+
+## Contact
 
 - Email: [gahuniaoutfit@gmail.com](mailto:gahuniaoutfit@gmail.com)  
-- Phone: +91 98 345 2471
+- Phone: +91 98 345 2471  
