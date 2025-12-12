@@ -519,7 +519,9 @@ footer {
   margin: 0 auto;         /* centers video horizontally */
 }
 .catalog-intro figcaption {
-  color: white;
+  color: rgb(31, 6, 60);
+  font-weight: bold;
+  font-size: large;
 }
 
 
